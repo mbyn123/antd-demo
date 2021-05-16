@@ -1,16 +1,14 @@
 import React from 'react'
-import 'antd/dist/antd.css'; 
-import { Affix,Button } from 'antd';
+import Dayjs from 'dayjs';
+import DatePicker from './components/DatePicker'
 
 
+const dateFormat = 'YYYY/MM/DD';
 function App() {
   return (
     <div className="App">
-      <Affix offsetTop={10}>
-        <Button type="primary">
-          Affix top
-        </Button>
-      </Affix>
+     
+      <DatePicker defaultValue={Dayjs('2015/01/01', dateFormat)} format={dateFormat} />
     </div>
   );
 }
